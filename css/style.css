@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd/CircularStd-MediumItalic.eot");
+  src: local("Circular Std Medium Italic"), local("CircularStd-MediumItalic"), url("../fonts/CircularStd/CircularStd-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-MediumItalic.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-MediumItalic.woff") format("woff"), url("../fonts/CircularStd/CircularStd-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd/CircularStd-Black.eot");
+  src: local("Circular Std Black"), local("CircularStd-Black"), url("../fonts/CircularStd/CircularStd-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-Black.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-Black.woff") format("woff"), url("../fonts/CircularStd/CircularStd-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd/CircularStd-Medium.eot");
+  src: local("Circular Std Medium"), local("CircularStd-Medium"), url("../fonts/CircularStd/CircularStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-Medium.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-Medium.woff") format("woff"), url("../fonts/CircularStd/CircularStd-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd/CircularStd-Bold.eot");
+  src: local("Circular Std Bold"), local("CircularStd-Bold"), url("../fonts/CircularStd/CircularStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-Bold.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-Bold.woff") format("woff"), url("../fonts/CircularStd/CircularStd-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd/CircularStd-BlackItalic.eot");
+  src: local("Circular Std Black Italic"), local("CircularStd-BlackItalic"), url("../fonts/CircularStd/CircularStd-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-BlackItalic.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-BlackItalic.woff") format("woff"), url("../fonts/CircularStd/CircularStd-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../fonts/CircularStd/CircularStd-BookItalic.eot");
+  src: local("Circular Std Book Italic"), local("CircularStd-BookItalic"), url("../fonts/CircularStd/CircularStd-BookItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-BookItalic.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-BookItalic.woff") format("woff"), url("../fonts/CircularStd/CircularStd-BookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd/CircularStd-BoldItalic.eot");
+  src: local("Circular Std Bold Italic"), local("CircularStd-BoldItalic"), url("../fonts/CircularStd/CircularStd-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-BoldItalic.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-BoldItalic.woff") format("woff"), url("../fonts/CircularStd/CircularStd-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("../fonts/CircularStd/CircularStd-Book.eot");
+  src: local("Circular Std Book"), local("CircularStd-Book"), url("../fonts/CircularStd/CircularStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/CircularStd/CircularStd-Book.woff2") format("woff2"), url("../fonts/CircularStd/CircularStd-Book.woff") format("woff"), url("../fonts/CircularStd/CircularStd-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Circular Std", sans-serif;
+  font-size: 17px;
+}
+
+.container {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.header .row {
+  padding: 50px 0;
+  justify-content: space-between;
+}
+.header-logo {
+  display: inline-block;
+  top: 12px;
+  position: relative;
+}
+.header-search {
+  column-gap: 20px;
+}
+.header-search input[type=search] {
+  padding: 0;
+  margin: 0;
+  width: 350px;
+  height: 25px;
+  border: none;
+  color: #646464;
+  outline: none;
+}
+.header-search input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.header-search input[type=search]::placeholder {
+  color: #c8c8c8;
+  margin: 0 auto;
+}
+.header__panel label, .header__panel-menu {
+  display: none;
+}
+.header__panel-navigation ul {
+  margin-right: 45px;
+  column-gap: 45px;
+  height: 100%;
+}
+.header__panel-navigation ul a {
+  display: inline-block;
+}
+.header__panel-navigation ul a::after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  border-bottom: black 2px solid;
+  opacity: 0;
+}
+.header__panel-navigation ul a:hover::after,
+.header__panel-navigation ul .active::after {
+  transition: 0.3s;
+  opacity: 100%;
+}
+.header__panel-buttons {
+  column-gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .header-search {
+    margin-left: 50px;
+    column-gap: 15px;
+  }
+  .header-search input {
+    max-width: 350px;
+  }
+  .header__panel-navigation ul {
+    margin-right: 30px;
+    column-gap: 30px;
+  }
+  .header__panel-buttons {
+    column-gap: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .header {
+    font-size: 15px;
+  }
+  .header img {
+    transform: scale(0.8);
+  }
+  .header-search {
+    margin-left: 40px;
+  }
+  .header-search input {
+    max-width: 200px;
+  }
+}
+@media (max-width: 870px) {
+  .header-search {
+    margin-left: 20px;
+    width: 500px;
+  }
+  .header__panel label {
+    position: relative;
+    display: block;
+    width: 40px;
+  }
+  .header__panel-menu {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .header__panel label img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transform: scale(1.4);
+  }
+  .header__panel-menu:checked {
+    background-color: red;
+  }
+  .header__panel-navigation ul {
+    display: none;
+    margin-right: 0;
+    column-gap: 0;
+  }
+  .header__panel-navigation ul a:after {
+    display: none;
+  }
+  .header__panel-buttons {
+    column-gap: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

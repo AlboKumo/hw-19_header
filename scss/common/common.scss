@@ -1,0 +1,22 @@
+body {
+  font-family: $font-family__standart;
+  font-size: $font-size__standart;
+}
+
+.container {
+  max-width: 1330px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
